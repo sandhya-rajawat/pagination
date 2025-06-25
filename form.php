@@ -27,7 +27,7 @@ include './fetch.php';
             <th class="border px-4 py-2 text-left">Phone</th>
             <th class="border px-4 py-2 text-left">City</th>
             <th class="border px-4 py-2 text-left"><a href='./insert.php'>Add Student</a></th>
-            <th class="border px-4 py-2">Action</th>
+            <th class="border px-4 py-2 text-left">Action</th>
 
           </tr>
         </thead>
@@ -45,10 +45,10 @@ include './fetch.php';
               <td class="border px-4 py-2"><?= htmlentities($rows['city']); ?></td>
               <td class="border px-4 py-2"><a href='./insert.php'>Add Student</a></td>
               <td class="border px-4 py-2">
-              
-                <a href="?delete=<?= $rows['id'] ?>"
 
-                  class="text-red-600 hover:underline">
+                <a href="?delete=<?= $rows['id'] ?>"
+                onclick="return confirm('are u sure!!')"
+                                class="text-red-600 hover:underline">
                   Delete
                 </a>
               </td>
